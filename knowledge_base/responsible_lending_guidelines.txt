@@ -1,0 +1,45 @@
+RESPONSIBLE LENDING GUIDELINES
+Document ID: RLG-2024
+Applicable to: All retail credit products — personal loans, mortgages, overdrafts
+Last reviewed: 2024-01
+
+SECTION 1 — OVER-INDEBTEDNESS PREVENTION
+Lenders have a legal and ethical obligation to assess whether the granting of credit places
+the borrower at material risk of over-indebtedness.
+
+Rule 1.1: Where DSTI exceeds 35% AND the annualised default probability is above 4%,
+the application requires enhanced affordability assessment. The analyst must document
+evidence that the borrower can sustain the obligation under stress conditions.
+
+Rule 1.2: Where the combined effect of all outstanding obligations and the requested loan
+would result in Debt/Income above 20 months, the lender must demonstrate that the
+borrower has sufficient residual income for essential living expenses.
+
+Rule 1.3: Lenders must not approve loans where there is clear evidence of existing
+financial distress (e.g., current past-due amounts greater than two months' installment).
+
+SECTION 2 — ALTERNATIVE STRUCTURES FOR BORDERLINE CASES
+For borderline applications where the standard loan structure is not approvable but the
+borrower has demonstrable creditworthiness, lenders should consider:
+
+Rule 2.1: Reduced loan amount — if a lower amount brings DSTI or rNPV into acceptable
+range, the analyst should propose this as an alternative before issuing a rejection.
+
+Rule 2.2: Extended term — increasing the repayment period reduces monthly installment
+and therefore DSTI. This may be appropriate where long-term default probability is low.
+
+Rule 2.3: Phased disbursement — for larger amounts, releasing funds in tranches
+conditional on repayment behavior may be considered.
+
+SECTION 3 — VULNERABLE BORROWERS
+Applications from borrowers showing indicators of financial vulnerability (recent job change,
+high medical expenses, recent divorce/separation inferred from income changes) must be
+handled with additional care. Automatic rejection is not appropriate; these cases must be
+referred to a specialist team.
+
+SECTION 4 — DOCUMENTATION OBLIGATIONS
+Every credit decision must be documented with:
+- The specific indicators and thresholds applied
+- The rationale for the outcome
+- Reference to the policy or guideline sections relied upon
+- Identity of the analyst who reviewed the decision (for yellow and red outcomes)

@@ -1,0 +1,99 @@
+{
+  "case": {
+    "case_id": "CASE_08",
+    "product": "Personal Loan",
+    "amount": 10000,
+    "term_months": 36,
+    "dsti": 0.45,
+    "debt_plafond": 0.9,
+    "debt_income_months": 20,
+    "app_score": "C",
+    "afford_score": "C",
+    "credit_rule_flag": true,
+    "default_prob_annual": 0.065,
+    "recovery_rate": 0.1,
+    "discount_rate": 0.03,
+    "rnpv_mean": -640,
+    "expected_adms_decision": "RED"
+  },
+  "adms_result": {
+    "decision": "RED",
+    "hard_flags": [
+      "NEGATIVE_RNPV",
+      "DSTI_EXCEEDS_CEILING",
+      "DEBT_PLAFOND_MANDATORY_REVIEW",
+      "CREDIT_RULE_TRIGGERED",
+      "DUAL_C_SCORE"
+    ],
+    "borderline_flags": [
+      "DEBT_INCOME_ELEVATED",
+      "SINGLE_C_SCORE",
+      "ELEVATED_DEFAULT_PROB"
+    ]
+  },
+  "retrieved_passages": [
+    {
+      "text": "or analyst.\nPolicy rule 3.2: Debt/Income between 12 and 18 months is moderate leverage \u2014 acceptable\nfor applicants with strong application and affordability scores.\nPolicy rule 3.3: Debt/Income below 12 months is low leverage and is considered positive.\n\nSECTION 4 \u2014 PROFITABILITY (rNPV)\nThe Random Net Present Value (rNPV) represents the expected economic value of the loan\nto the institution, accou",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.3819954991340637
+    },
+    {
+      "text": "PV) represents the expected economic value of the loan\nto the institution, accounting for probability of default, recovery rates, prepayment, and\ncost of capital.\n\nPolicy rule 4.1: A positive rNPV mean is a minimum condition for loan approval under\nstandard credit policy.\nPolicy rule 4.2: Applications with negative rNPV mean may only be approved through the\nPolicy Exception Process (PEP), which re",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.401317298412323
+    },
+    {
+      "text": "INTERNAL CREDIT POLICY v3.2\nDocument ID: ICP-3.2\nLast reviewed: 2024-01\n\nSECTION 1 \u2014 DEBT SERVICE TO INCOME (DSTI)\nThe DSTI ratio measures the proportion of a borrower's gross monthly income consumed by\ntotal debt repayment obligations including the requested loan installment.\n\nPolicy rule 1.1: DSTI must not exceed 40% for standard personal loan and overdraft products.\nPolicy rule 1.2: DSTI betwee",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.41387391090393066
+    },
+    {
+      "text": "for standard personal loan and overdraft products.\nPolicy rule 1.2: DSTI between 35% and 40% requires additional scrutiny and must be escalated\nto a senior credit analyst before final approval.\nPolicy rule 1.3: DSTI below 30% is considered within the acceptable standard range and does\nnot require additional commentary on this metric alone.\nPolicy rule 1.4: For mortgage products, DSTI ceiling is 3",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.4146987199783325
+    }
+  ],
+  "llm_output": {
+    "summary_table": [
+      {
+        "indicator": "Debt/Income (months)",
+        "value": 20,
+        "threshold": "Not covered in retrieved documents",
+        "risk_interpretation": "Not assessed",
+        "final_impact": "Not evaluated",
+        "policy_reference": ""
+      },
+      {
+        "indicator": "DSTI",
+        "value": 0.45,
+        "threshold": "40%",
+        "risk_interpretation": "Exceeds ceiling",
+        "final_impact": "Concern",
+        "policy_reference": "[internal_credit_policy] Policy rule 1.1"
+      },
+      {
+        "indicator": "rNPV Mean",
+        "value": -640,
+        "threshold": "Not covered in retrieved documents",
+        "risk_interpretation": "Negative",
+        "final_impact": "Concern",
+        "policy_reference": "[internal_credit_policy] Policy rule 4.1"
+      }
+    ],
+    "normative_flags": [
+      [
+        "NEGATIVE_RNPV",
+        "DSTI_EXCEEDS_CEILING"
+      ]
+    ],
+    "recommendation": "REJECT",
+    "rationale": "The credit decision is not compliant with the internal credit policy due to the negative rNPV mean and DSTI exceeding the ceiling. These indicators are considered concerns according to the policy.",
+    "gdpr_art22_explanation": "We have assessed your credit application based on our internal credit policy, which takes into account your personal data. We regret that we cannot approve your loan request at this time.",
+    "alternative_structure": null,
+    "prob_score": 10
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "case": {
+    "case_id": "CASE_06",
+    "product": "Overdraft",
+    "amount": 5000,
+    "term_months": 12,
+    "dsti": 0.28,
+    "debt_plafond": 0.45,
+    "debt_income_months": 8,
+    "app_score": "A",
+    "afford_score": "A",
+    "credit_rule_flag": false,
+    "default_prob_annual": 0.008,
+    "recovery_rate": 0.05,
+    "discount_rate": 0.03,
+    "rnpv_mean": 210,
+    "expected_adms_decision": "GREEN"
+  },
+  "adms_result": {
+    "decision": "GREEN",
+    "hard_flags": [],
+    "borderline_flags": []
+  },
+  "retrieved_passages": [
+    {
+      "text": "k of over-indebtedness.\n\nRule 1.1: Where DSTI exceeds 35% AND the annualised default probability is above 4%,\nthe application requires enhanced affordability assessment. The analyst must document\nevidence that the borrower can sustain the obligation under stress conditions.\n\nRule 1.2: Where the combined effect of all outstanding obligations and the requested loan\nwould result in Debt/Income above",
+      "source": "responsible_lending_guidelines",
+      "filename": "responsible_lending_guidelines.txt",
+      "distance": 0.3463823199272156
+    },
+    {
+      "text": "for standard personal loan and overdraft products.\nPolicy rule 1.2: DSTI between 35% and 40% requires additional scrutiny and must be escalated\nto a senior credit analyst before final approval.\nPolicy rule 1.3: DSTI below 30% is considered within the acceptable standard range and does\nnot require additional commentary on this metric alone.\nPolicy rule 1.4: For mortgage products, DSTI ceiling is 3",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.34780561923980713
+    },
+    {
+      "text": "RESPONSIBLE LENDING GUIDELINES\nDocument ID: RLG-2024\nApplicable to: All retail credit products \u2014 personal loans, mortgages, overdrafts\nLast reviewed: 2024-01\n\nSECTION 1 \u2014 OVER-INDEBTEDNESS PREVENTION\nLenders have a legal and ethical obligation to assess whether the granting of credit places\nthe borrower at material risk of over-indebtedness.\n\nRule 1.1: Where DSTI exceeds 35% AND the annualised def",
+      "source": "responsible_lending_guidelines",
+      "filename": "responsible_lending_guidelines.txt",
+      "distance": 0.36213791370391846
+    },
+    {
+      "text": "INTERNAL CREDIT POLICY v3.2\nDocument ID: ICP-3.2\nLast reviewed: 2024-01\n\nSECTION 1 \u2014 DEBT SERVICE TO INCOME (DSTI)\nThe DSTI ratio measures the proportion of a borrower's gross monthly income consumed by\ntotal debt repayment obligations including the requested loan installment.\n\nPolicy rule 1.1: DSTI must not exceed 40% for standard personal loan and overdraft products.\nPolicy rule 1.2: DSTI betwee",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.3771839141845703
+    }
+  ],
+  "llm_output": {
+    "summary_table": [
+      {
+        "indicator": "DSTI",
+        "value": "0.28",
+        "threshold": "40%",
+        "risk_interpretation": "Below threshold",
+        "final_impact": "Positive",
+        "policy_reference": "internal_credit_policy, Policy rule 1.3"
+      },
+      {
+        "indicator": "Annualised default probability",
+        "value": "0.008",
+        "threshold": "4%",
+        "risk_interpretation": "Below threshold",
+        "final_impact": "Positive",
+        "policy_reference": "responsible_lending_guidelines, Rule 1.1"
+      }
+    ],
+    "normative_flags": [],
+    "recommendation": "APPROVE",
+    "rationale": "Based on the policy documents, the DSTI ratio is below the threshold of 40%, and the annualised default probability is also below the threshold of 4%. Therefore, there are no compliance issues.",
+    "gdpr_art22_explanation": "We have assessed your creditworthiness based on our internal policies and guidelines. Our decision is made without using automated decision-making processes that significantly affect you.",
+    "alternative_structure": null,
+    "prob_score": 10
+  }
+}

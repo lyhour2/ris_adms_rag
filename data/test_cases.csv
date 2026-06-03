@@ -1,0 +1,9 @@
+case_id,product,amount,term_months,dsti,debt_plafond,debt_income_months,app_score,afford_score,credit_rule_flag,default_prob_annual,recovery_rate,discount_rate,rnpv_mean,expected_adms_decision
+CASE_01,Personal Loan,17000,60,0.30,0.60,10,A,A,False,0.013,0.10,0.030,1261,GREEN
+CASE_02,Personal Loan,17000,60,0.33,0.60,13,B,A,False,0.042,0.10,0.030,31,YELLOW
+CASE_03,Personal Loan,17000,60,0.33,0.60,13,B,A,False,0.043,0.10,0.030,-10,YELLOW
+CASE_04,Personal Loan,17000,60,0.42,0.87,16,C,B,True,0.052,0.10,0.030,-373,RED
+CASE_05,Mortgage,120000,240,0.36,0.65,14,B,B,False,0.025,0.15,0.030,580,YELLOW
+CASE_06,Overdraft,5000,12,0.28,0.45,8,A,A,False,0.008,0.05,0.030,210,GREEN
+CASE_07,Personal Loan,25000,84,0.38,0.72,17,B,C,False,0.038,0.10,0.030,95,YELLOW
+CASE_08,Personal Loan,10000,36,0.45,0.90,20,C,C,True,0.065,0.10,0.030,-640,RED

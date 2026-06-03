@@ -1,0 +1,64 @@
+REGULATORY COMPLIANCE FRAMEWORK — GDPR AND EU AI ACT
+Document ID: REG-COMP-2024
+Last reviewed: 2024-01
+
+PART A — GENERAL DATA PROTECTION REGULATION (GDPR)
+
+Article 6(1)(b) — Legal Basis for Processing
+Credit scoring and automated decision-making for loan origination is lawful under
+Art.6(1)(b) GDPR as processing necessary for the performance of a contract to which
+the data subject is party. All variables used in the scoring model must have documented
+legal basis. Inferred or derived variables created from behavioural data require
+explicit consent documentation under Art.9 where sensitive categories are involved.
+
+Article 22 — Automated Individual Decision-Making
+Credit decisions made solely by automated means have significant legal effect on
+applicants. Under Art.22 GDPR, applicants have the right to:
+(a) Obtain human intervention in the decision process
+(b) Express their point of view
+(c) Obtain an explanation of the decision
+(d) Contest the decision
+
+Compliance obligation: Every automated credit decision must be accompanied by a
+meaningful explanation that references the specific data points used and their impact
+on the outcome. This explanation must be available to the applicant on request and
+must not consist solely of a score or a category.
+
+Data minimisation (Art.5(1)(c)): Only data strictly necessary for creditworthiness
+assessment should be processed. Use of social media data, location data, or
+psychographic profiles is not permitted without specific regulatory authorisation.
+
+PART B — EU ARTIFICIAL INTELLIGENCE ACT (AI ACT)
+
+Classification of Credit Scoring Systems
+Credit scoring systems used for granting or denying access to financial services are
+classified as HIGH-RISK AI systems under Annex III, point 5(b) of the EU AI Act.
+
+Obligations for High-Risk AI Systems (Chapter 3):
+
+Article 9 — Risk Management System
+A continuous risk management process must be established and documented for the
+AI system. This includes identification and analysis of known and foreseeable risks,
+estimation of risks arising from intended use, and implementation of risk management
+measures.
+
+Article 13 — Transparency and Provision of Information
+High-risk AI systems must be designed to ensure sufficient transparency to enable
+deployers to interpret the system's output. Technical documentation must include
+a description of the system's performance on relevant populations, including any
+known or foreseeable limitations.
+
+Article 14 — Human Oversight
+High-risk AI systems must be designed to allow effective human oversight. Deployers
+must assign the task of human oversight to natural persons with the necessary
+competence, training, and authority to intervene. Automated rejections must be
+reviewable by a natural person.
+
+Article 17 — Quality Management System
+Providers must implement a quality management system including policies and
+procedures for data governance, technical documentation, record keeping, and
+post-market monitoring.
+
+Logging obligations: All inputs, outputs, and decisions of the AI system must be
+logged with sufficient detail to enable post-hoc review. Logs must be retained
+for a period of at least 10 years for credit decisions affecting consumers.

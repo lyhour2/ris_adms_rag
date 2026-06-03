@@ -1,0 +1,93 @@
+{
+  "case": {
+    "case_id": "CASE_03",
+    "product": "Personal Loan",
+    "amount": 17000,
+    "term_months": 60,
+    "dsti": 0.33,
+    "debt_plafond": 0.6,
+    "debt_income_months": 13,
+    "app_score": "B",
+    "afford_score": "A",
+    "credit_rule_flag": false,
+    "default_prob_annual": 0.043,
+    "recovery_rate": 0.1,
+    "discount_rate": 0.03,
+    "rnpv_mean": -10,
+    "expected_adms_decision": "YELLOW"
+  },
+  "adms_result": {
+    "decision": "RED",
+    "hard_flags": [
+      "NEGATIVE_RNPV"
+    ],
+    "borderline_flags": [
+      "DSTI_BORDERLINE",
+      "ELEVATED_DEFAULT_PROB"
+    ]
+  },
+  "retrieved_passages": [
+    {
+      "text": "INTERNAL CREDIT POLICY v3.2\nDocument ID: ICP-3.2\nLast reviewed: 2024-01\n\nSECTION 1 \u2014 DEBT SERVICE TO INCOME (DSTI)\nThe DSTI ratio measures the proportion of a borrower's gross monthly income consumed by\ntotal debt repayment obligations including the requested loan installment.\n\nPolicy rule 1.1: DSTI must not exceed 40% for standard personal loan and overdraft products.\nPolicy rule 1.2: DSTI betwee",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.37274765968322754
+    },
+    {
+      "text": "or analyst.\nPolicy rule 3.2: Debt/Income between 12 and 18 months is moderate leverage \u2014 acceptable\nfor applicants with strong application and affordability scores.\nPolicy rule 3.3: Debt/Income below 12 months is low leverage and is considered positive.\n\nSECTION 4 \u2014 PROFITABILITY (rNPV)\nThe Random Net Present Value (rNPV) represents the expected economic value of the loan\nto the institution, accou",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.38010191917419434
+    },
+    {
+      "text": "for standard personal loan and overdraft products.\nPolicy rule 1.2: DSTI between 35% and 40% requires additional scrutiny and must be escalated\nto a senior credit analyst before final approval.\nPolicy rule 1.3: DSTI below 30% is considered within the acceptable standard range and does\nnot require additional commentary on this metric alone.\nPolicy rule 1.4: For mortgage products, DSTI ceiling is 3",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.38022518157958984
+    },
+    {
+      "text": "ings DSTI or rNPV into acceptable\nrange, the analyst should propose this as an alternative before issuing a rejection.\n\nRule 2.2: Extended term \u2014 increasing the repayment period reduces monthly installment\nand therefore DSTI. This may be appropriate where long-term default probability is low.\n\nRule 2.3: Phased disbursement \u2014 for larger amounts, releasing funds in tranches\nconditional on repayment",
+      "source": "responsible_lending_guidelines",
+      "filename": "responsible_lending_guidelines.txt",
+      "distance": 0.40351682901382446
+    }
+  ],
+  "llm_output": {
+    "summary_table": [
+      {
+        "indicator": "DSTI",
+        "value": "0.33",
+        "threshold": "40%",
+        "risk_interpretation": "Within acceptable standard range",
+        "final_impact": "Positive",
+        "policy_reference": "internal_credit_policy, Policy rule 1.3"
+      },
+      {
+        "indicator": "Debt/Income (months)",
+        "value": "13",
+        "threshold": "12-18 months",
+        "risk_interpretation": "Moderate leverage \u2014 acceptable for applicants with strong application and affordability scores",
+        "final_impact": "Positive",
+        "policy_reference": "internal_credit_policy, Policy rule 3.2"
+      },
+      {
+        "indicator": "rNPV (mean)",
+        "value": "-10",
+        "threshold": "Not applicable",
+        "risk_interpretation": "Negative profitability \u2014 may indicate higher risk of default",
+        "final_impact": "Concern",
+        "policy_reference": "internal_credit_policy, SECTION 4 \u2014 PROFITABILITY (rNPV)"
+      }
+    ],
+    "normative_flags": [
+      [
+        "NEGATIVE_RNPV"
+      ]
+    ],
+    "recommendation": "REVIEW REQUIRED",
+    "rationale": "The credit decision is flagged for review due to the negative profitability (rNPV) and elevated default probability. The DSTI ratio is within the acceptable range, but the debt/income months indicate moderate leverage.",
+    "gdpr_art22_explanation": "We are reviewing your application to ensure that our credit decision is fair and transparent. This may involve additional scrutiny or alternative lending options.",
+    "alternative_structure": null,
+    "prob_score": 8
+  }
+}

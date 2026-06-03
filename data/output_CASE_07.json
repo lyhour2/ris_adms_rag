@@ -1,0 +1,95 @@
+{
+  "case": {
+    "case_id": "CASE_07",
+    "product": "Personal Loan",
+    "amount": 25000,
+    "term_months": 84,
+    "dsti": 0.38,
+    "debt_plafond": 0.72,
+    "debt_income_months": 17,
+    "app_score": "B",
+    "afford_score": "C",
+    "credit_rule_flag": false,
+    "default_prob_annual": 0.038,
+    "recovery_rate": 0.1,
+    "discount_rate": 0.03,
+    "rnpv_mean": 95,
+    "expected_adms_decision": "YELLOW"
+  },
+  "adms_result": {
+    "decision": "YELLOW",
+    "hard_flags": [],
+    "borderline_flags": [
+      "DSTI_BORDERLINE",
+      "DEBT_INCOME_ELEVATED",
+      "RNPV_MARGINAL",
+      "SINGLE_C_SCORE"
+    ]
+  },
+  "retrieved_passages": [
+    {
+      "text": "INTERNAL CREDIT POLICY v3.2\nDocument ID: ICP-3.2\nLast reviewed: 2024-01\n\nSECTION 1 \u2014 DEBT SERVICE TO INCOME (DSTI)\nThe DSTI ratio measures the proportion of a borrower's gross monthly income consumed by\ntotal debt repayment obligations including the requested loan installment.\n\nPolicy rule 1.1: DSTI must not exceed 40% for standard personal loan and overdraft products.\nPolicy rule 1.2: DSTI betwee",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.363597571849823
+    },
+    {
+      "text": "for standard personal loan and overdraft products.\nPolicy rule 1.2: DSTI between 35% and 40% requires additional scrutiny and must be escalated\nto a senior credit analyst before final approval.\nPolicy rule 1.3: DSTI below 30% is considered within the acceptable standard range and does\nnot require additional commentary on this metric alone.\nPolicy rule 1.4: For mortgage products, DSTI ceiling is 3",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.38969409465789795
+    },
+    {
+      "text": "or analyst.\nPolicy rule 3.2: Debt/Income between 12 and 18 months is moderate leverage \u2014 acceptable\nfor applicants with strong application and affordability scores.\nPolicy rule 3.3: Debt/Income below 12 months is low leverage and is considered positive.\n\nSECTION 4 \u2014 PROFITABILITY (rNPV)\nThe Random Net Present Value (rNPV) represents the expected economic value of the loan\nto the institution, accou",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.395852267742157
+    },
+    {
+      "text": "on this metric alone.\nPolicy rule 1.4: For mortgage products, DSTI ceiling is 38% given the longer-term commitment.\n\nSECTION 2 \u2014 DEBT CEILING (DEBT/PLAFOND RATIO)\nThe Debt/Plafond ratio represents total outstanding debt as a proportion of the borrower's\napproved credit plafond or total available credit.\n\nPolicy rule 2.1: Debt/Plafond ratio above 75% triggers mandatory manual review regardless\nof",
+      "source": "internal_credit_policy",
+      "filename": "internal_credit_policy.txt",
+      "distance": 0.410331130027771
+    }
+  ],
+  "llm_output": {
+    "summary_table": [
+      {
+        "indicator": "DSTI",
+        "value": "0.38",
+        "threshold": "40%",
+        "risk_interpretation": "Concern",
+        "final_impact": "Review Required",
+        "policy_reference": "internal_credit_policy, Section 1 \u2014 DEBT SERVICE TO INCOME (DSTI), Policy rule 1.2"
+      },
+      {
+        "indicator": "Debt/Income Months",
+        "value": "17",
+        "threshold": "12-18 months",
+        "risk_interpretation": "Moderate leverage, acceptable for applicants with strong application and affordability scores.",
+        "final_impact": "Positive",
+        "policy_reference": "internal_credit_policy, Section 3 \u2014 PROFITABILITY (rNPV), Policy rule 3.2"
+      },
+      {
+        "indicator": "Debt/Plafond Ratio",
+        "value": "0.72",
+        "threshold": "75%",
+        "risk_interpretation": "Triggers mandatory manual review regardless of other factors.",
+        "final_impact": "Review Required",
+        "policy_reference": "internal_credit_policy, Section 2 \u2014 DEBT CEILING (DEBT/PLAFOND RATIO), Policy rule 2.1"
+      }
+    ],
+    "normative_flags": [
+      [
+        "DSTI_BORDERLINE",
+        "DEBT_INCOME_ELEVATED",
+        "RNPV_MARGINAL"
+      ]
+    ],
+    "recommendation": "MANUAL REVIEW",
+    "rationale": "The credit decision requires manual review due to the borderline DSTI, elevated debt income ratio, and marginal RNPV. The Debt/Plafond ratio also triggers mandatory manual review.",
+    "gdpr_art22_explanation": "We are conducting a manual review of your application to ensure that our credit decision is fair and transparent, as required by GDPR Article 22.",
+    "alternative_structure": null,
+    "prob_score": 8
+  }
+}
